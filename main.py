@@ -6,10 +6,12 @@ def get_book_text(path_to_file):
 def wordcounter(booktxt):
     words = booktxt.split()
     length = len(words)
+    return length
 
 def main():
     path_to_file = "./books/frankenstein.txt"
     booktxt = get_book_text(path_to_file)
-    print(booktxt)
+    word_count = wordcounter(booktxt)
+    print(f"{word_count} words found in the document")
 
 main()
